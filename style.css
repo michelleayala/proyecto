@@ -1,0 +1,228 @@
+/* Configuracion */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth; 
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+:root{
+    --main-color:#2c405b;
+    --black:#13131a;
+    --bg:#005f89;
+    --border:.1rem solid rgba(255,255,255,.3);
+}
+
+
+/* header */
+.header{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.header .logo img{
+    height: 6rem;
+}
+
+.buscador{
+    width: 500px;
+    height: 30px;
+    margin: 0 auto;
+
+}
+
+.header .navbar a{
+    margin:0 1rem;
+    font-size: 1.6rem;
+    color:#fff;
+}
+
+.header .navbar a:hover{
+    color:var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+button{
+    height: 30px;
+    width: 50px;
+}
+
+.fa-search{
+    color: black;
+    width: 30px;
+    height: 15px;
+    
+
+}
+.header .icons div{
+    color:#fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover{
+    color:var(--main-color);
+}
+
+#menu-btn{
+    display: none;
+}
+
+
+
+.header .cart-items-container{
+    position: absolute;
+    top:100%; right: -100%;
+    height: calc(100vh - 9.5rem);
+    width: 35rem;
+    background: #fff;
+    padding:0 1.5rem;
+}
+
+.header .cart-items-container.active{
+    right: 0;
+}
+
+.header .cart-items-container .cart-item{
+    position: relative;
+    margin:2rem 0;
+    display: flex;
+    align-items: center;
+    gap:1.5rem;
+}
+
+.header .cart-items-container .cart-item .fa-times{
+    position: absolute;
+    top:1rem; right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--black);
+}
+
+.header .cart-items-container .cart-item .fa-times:hover{
+    color:var(--main-color);
+}
+
+.header .cart-items-container .cart-item img{
+    height: 7rem;
+}
+
+.header .cart-items-container .cart-item .content h3{
+    font-size: 2rem;
+    color:var(--black);
+    padding-bottom: .5rem;
+}
+
+/* Body*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer*/
+.pie-pagina{
+    width: 100%;
+    /* Cuadro Superior */
+    background-color: #0093b7;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    height: 7rem;
+}
+.pie-pagina .grupo-1 .box h2{
+    /* Color Titulo Parrafo */
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    /* Color Parrafo */
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .redes-sociales a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    /* Color icono */
+    color: #a0c5cf;
+    margin-right: 10px;
+    /* Color Recuadro Icono */
+    background-color: #005f89;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .redes-sociales a:hover{
+    /* Seleccion de Iconos Redes Sociales */
+    color: #2c405b;
+}
+.pie-pagina .grupo-2{
+    /* Color Cuadro CopyRigt */
+    background-color: #005f89;
+    padding: 15px 10px;
+    text-align: center;
+    color: #ffff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 80%;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    } 
+}
+
